@@ -13,4 +13,4 @@ use App\Livewire\Pages\Productos\Listado;
 Route::livewire('/productos','pages::productos.listados')->name('productos.index');
 
 // Ruta 2: Versión completa (buscador + desplegables de categoría y almacén)
-Route::livewire('/productos-filtros', 'pages::productos.filtros')->name('productos.filtros');
+Route::livewire('/productos-20k', 'pages::productos.listados-20k')->name('productos.20k');
