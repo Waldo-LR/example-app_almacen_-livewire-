@@ -14,3 +14,6 @@ Route::livewire('/productos','pages::productos.listados')->name('productos.index
 
 // Ruta 2: Versión completa (buscador + desplegables de categoría y almacén)
 Route::livewire('/productos-20k', 'pages::productos.listados-20k')->name('productos.20k');
+
+// Rutas para Proveedores
+Route::livewire('/proveedores', 'pages::proveedores.listados')->name('proveedores.index');

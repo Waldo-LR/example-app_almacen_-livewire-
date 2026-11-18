@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             AlmacenSeeder::class,
             ProductoSeeder::class,
             Stock_AlmacenSeeder::class,
+            ProveedorSeeder::class,
         ]);
     }
 }
