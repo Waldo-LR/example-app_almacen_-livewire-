@@ -1,19 +1,18 @@
-﻿<?php
+<?php
 
 use Livewire\Component;
 
-new class extends Component
-{
-    //
-};
+new class extends Component {};
 ?>
 
-@extends('layouts.app')
-
-@section('contenido')
-    @livewire('proveedores-index')
-@endsection
-
-@section('formulario')
-    @livewire('proveedores-form')
-@endsection
+<div>
+    <div class="container mx-auto grid grid-cols-6 py-10 px-6 rounded-2xl bg-gradient-to-b from-gray-300 to-gray-500 shadow-lg max-w-7xl mt-7">
+        <div class="col-span-1"></div>
+        <div class="col-span-3">
+            @livewire('proveedores-index')
+        </div>
+        <div class="col-span-2">
+            @livewire('proveedores-form')
+        </div>
+    </div>
+</div>

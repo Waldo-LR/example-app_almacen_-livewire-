@@ -18,7 +18,6 @@ return new class extends Migration
         });
 
         Schema::table('productos', function (Blueprint $table) {
-            $table->string('codigo', 20)->nullable()->unique()->after('id');
             $table->foreignId('categoria_id')->nullable()->after('codigo')
                 ->constrained('categorias')->nullOnDelete();
         });

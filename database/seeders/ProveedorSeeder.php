@@ -127,7 +127,10 @@ class ProveedorSeeder extends Seeder
         ];
 
         foreach ($proveedores as $proveedor) {
-            Proveedor::create($proveedor);
+            Proveedor::updateOrCreate(
+                ['codigo' => $proveedor['codigo']],
+                $proveedor,
+            );
         }
     }
 }

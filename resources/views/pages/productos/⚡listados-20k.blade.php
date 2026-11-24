@@ -2,33 +2,17 @@
 
 use Livewire\Component;
 
-
-new class extends Component
-{
-    // public function productos(){
-    //     return Producto::with(['cantidad.almacen'])->get();
-    // }
-};
+new class extends Component {};
 ?>
 
-@extends('layouts.app')
-@section('contenido')
-@livewire('productos-20k')
-{{-- <div>
-    <table class="w-full text-left border-collapse bg-amber-600">
-        @forelse ( $this->productos() as $producto)
-            <tr class="border-b border-gray-300 hover:bg-amber-400">
-                <td>{{ $producto->id }}</td>
-                <td>{{ $producto->nombre }}</td>
-                <td>{{ $producto->precio }}</td>
-                <td>{{ $producto->cantidad->first()?->stock }}</td>
-                <td>{{ $producto->cantidad->first()?->almacen?->nombre }}</td>
-            </tr>
-        @empty
-            <div class="bg-amber-200 text-sm font-bold text-center col-span-5">Sin datos... </div>
-        @endforelse
-    </table>
-
-</div> --}}
-
-@endsection
+<div>
+    <div class="container mx-auto grid grid-cols-6 py-10 px-6 rounded-2xl bg-gradient-to-b from-gray-300 to-gray-500 shadow-lg max-w-7xl mt-7">
+        <div class="col-span-1"></div>
+        <div class="col-span-3">
+            @livewire('productos-20k')
+        </div>
+        <div class="col-span-2">
+            @livewire('productos-form')
+        </div>
+    </div>
+</div>

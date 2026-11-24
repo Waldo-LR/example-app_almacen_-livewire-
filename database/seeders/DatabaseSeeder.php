@@ -17,10 +17,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        User::factory()->updateOrCreate(
+            ['email' => 'admin@almacen.pe'],
+            [
+                'name' => 'Administrador',
+                'password' => 'Almacen2026',
+            ],
+        );
 
         $this->call([
             AlmacenSeeder::class,
